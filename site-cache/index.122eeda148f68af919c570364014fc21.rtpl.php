@@ -1,4 +1,4 @@
-    
+<?php if(!class_exists('Rain\Tpl')){exit;}?>    
         
             <div class="row">
                 <h1 class="header" id="home">Home</h1>

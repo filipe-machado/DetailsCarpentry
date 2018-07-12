@@ -27,6 +27,13 @@
     <script src="/dist/main.bundle.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems, {
+                responsiveThreshold: 0
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
             let elems = document.querySelectorAll('.fixed-action-btn');
             let instances = M.FloatingActionButton.init(elems, {
                 direction: 'top'

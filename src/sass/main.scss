@@ -2,28 +2,7 @@
 
 @import '~material-icons/css/material-icons.scss';
 @import '~material-icons/iconfont/codepoints.scss';
-
 @import '~materialize-css/sass/materialize';
-
-//@import '~material-icons/iconfont/material-icons.scss';
-
-$material-icons-codepoints: () !default; /* Sass map of icon names and codepoints */
-$material-icons-font-path: '' !default;
-$material-icons-font-name: 'MaterialIcons-Regular' !default;
-$material-icons-font-size: 24px !default;
-$material-icons-font-family: 'Material Icons' !default;
-$material-icons-font-path: '~material-icons/iconfont/';
-$material-icons-css-prefix: 'mi' !default;
-$material-icons-css-search: '_' !default;
-$material-icons-css-replace: '-' !default; /* To replace '_' with '-' in CSS class names */
-
-.mi-face {
-  @include material-icon('face');
-}
-
-.material-icons {
-  @include material-icons();
-}
 
 :root {
   --blue: #007bff;
