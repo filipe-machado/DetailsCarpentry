@@ -44,6 +44,22 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   line-height: 89px;
 }
 
+nav {
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+  ul {
+    a {
+      color: #ee6e73;
+      text-transform: uppercase;
+    }
+  }
+  i {
+    color: #ee6e73;
+    font-size: 32px !important;
+  }
+}
+
 p {
   text-align: justify;
   text-indent: 3em;

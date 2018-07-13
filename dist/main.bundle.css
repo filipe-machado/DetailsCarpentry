@@ -9340,32 +9340,6 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem; } }
 
-/* Sass map of icon names and codepoints */
-/* To replace '_' with '-' in CSS class names */
-.mi-face:before {
-  content: "\E87C"; }
-
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga'; }
-
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9405,6 +9379,17 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
   height: 89px;
   line-height: 89px; }
 
+nav {
+  background-color: #fff;
+  border: none;
+  box-shadow: none; }
+  nav ul a {
+    color: #ee6e73;
+    text-transform: uppercase; }
+  nav i {
+    color: #ee6e73;
+    font-size: 32px !important; }
+
 p {
   text-align: justify;
   text-indent: 3em; }
@@ -9422,5 +9407,3 @@ h3 {
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.9466666667rem 0 1.168rem 0; }
-
-/*# sourceMappingURL=main.bundle.css.map*/
