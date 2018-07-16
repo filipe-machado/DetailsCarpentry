@@ -187,7 +187,10 @@ build/Release
 
 # Dependency directories
 node_modules/
+/node_modules/
 jspm_packages/
+vendor/
+/vendor/
 
 # Typescript v1 declaration files
 typings/

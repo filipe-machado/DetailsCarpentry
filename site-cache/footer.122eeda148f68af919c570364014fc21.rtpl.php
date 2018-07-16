@@ -25,7 +25,16 @@
         </div>
     </footer>
     <script src="/dist/main.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        //<![CDATA[
+        $(window).on('load', function () {
+            $('#preloader .inner').fadeOut();
+            $('#preloader').delay(350).fadeOut('slow'); 
+            $('body').delay(350).css({'overflow': 'visible'});
+        })
+        //]]>
+
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.parallax');
             var instances = M.Parallax.init(elems, {
