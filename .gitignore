@@ -176,3 +176,4 @@ fabric.properties
 /package-lock.json
 /site-cache
 /.idea
+/dist
