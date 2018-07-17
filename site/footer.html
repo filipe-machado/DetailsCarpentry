@@ -30,11 +30,10 @@
         //<![CDATA[
         $(window).on('load', function () {
             $('#preloader .inner').fadeOut();
-            $('#preloader').delay(350).fadeOut('slow'); 
-            $('body').delay(350).css({'overflow': 'visible'});
+            $('#preloader').delay(450).fadeOut('slow'); 
+            $('body').delay(450).css({'overflow': 'visible'});
         })
         //]]>
-
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.parallax');
             var instances = M.Parallax.init(elems, {
@@ -45,7 +44,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             let elems = document.querySelectorAll('.fixed-action-btn');
             let instances = M.FloatingActionButton.init(elems, {
-                direction: 'top'
+                direction: 'top',
+                hoverEnabled: false
             });
         });
 
@@ -55,15 +55,7 @@
                 dragable: true
             });
         });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            let elems = document.querySelectorAll('.carousel');
-            let instance = M.Carousel.init(elems, {
-                shift: 20
-            });
-        });
-        M.AutoInit();
-
+        
     </script>
     </body>
 </html>
