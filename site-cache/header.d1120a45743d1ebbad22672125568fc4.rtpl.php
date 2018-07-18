@@ -1,0 +1,177 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/dist/main.bundle.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+            body {
+                overflow: hidden; 
+            }
+            
+            /* ini: Preloader */
+            
+            #preloader {
+                position:fixed;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color:#fff; /* cor do background que vai ocupar o body */
+                z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+            }
+            #preloader .inner {
+                position: absolute;
+                top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+                left: 50%;
+                transform: translate(-50%, -50%);  
+            }
+
+            #logoD path {
+                stroke-dasharray: 775; /* cria um traço do tamanho do path inteiro */
+                stroke-dashoffset: 775; /* empurrar o traço para fora da visão */
+                animation: fillBlue 5s linear forwards;
+            }
+
+            @keyframes fillBlue {
+                80% {
+                    stroke-dashoffset: 0;
+                    fill: #fff;
+                }
+                100% {
+                    stroke-dashoffset: 0;
+                    fill: #00004f;
+                }                
+            }
+            
+            #logoC path{
+                stroke-dasharray: 564; /* cria um traço do tamanho do path inteiro */
+                stroke-dashoffset: 564; /* empurrar o traço para fora da visão */
+                animation: fillRed 5s linear forwards;
+            }
+
+            @keyframes fillRed{
+                80%{
+                    stroke-dashoffset: 0;
+                    fill: #fff;
+                }
+                100%{
+                    stroke-dashoffset: 0;
+                    fill: #e74a39;
+                }
+            }
+
+            #carpentry path{
+                stroke-dashoffset: 1872;
+                stroke-dasharray: 1872;
+                animation: writeC 14s linear forwards;
+            }
+
+            @keyframes writeC{
+                30%{
+                    fill: #fff;
+                }
+                35%{
+                    fill: #333;
+                }
+                100%{
+                    stroke-dashoffset: 0;
+                    fill: #333;
+                }
+            }
+
+            #details path{
+                stroke-dashoffset: 1200;
+                stroke-dasharray: 1200;
+                animation: writeD 14s linear forwards;
+            }
+
+
+            @keyframes writeD{
+                30%{
+                    fill: #fff;
+                }
+                35%{
+                    fill: #333;
+                }
+                100%{
+                    stroke-dashoffset: 0;
+                    fill: #333;
+                }
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <!-- início do preloader -->
+        <div id="preloader">
+            <div class="inner">
+                <svg xmlns="http://www.w3.org/2000/svg" width="190" height="80" viewBox="0 0 210 297"  id="svg3705">
+                    <g id="logoC" style="line-height:1.25;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start">
+                        <path fill="none" stroke="#000" stroke-width="5.94" d="M-4.995 261.206q-7.622 4.058-15.64 6.038-8.017 2.079-17.025 2.079-28.408 0-44.147-20.094-15.64-20.094-15.64-56.52 0-36.229 15.74-56.421 15.837-20.292 44.047-20.292 9.008 0 17.026 2.078 8.017 1.98 15.64 6.038v20.49q-7.326-6.038-15.74-9.205-8.413-3.168-16.926-3.168-19.5 0-29.2 15.046-9.7 15.045-9.7 45.434 0 30.289 9.7 45.334 9.7 15.046 29.2 15.046 8.711 0 17.026-3.167 8.413-3.168 15.64-9.206z" aria-label="C" font-family="monospace" font-size="202.72" font-weight="400" letter-spacing="0" style="-inkscape-font-specification:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start" transform="matrix(.96208 -.0013 .00255 1.03941 0 0)" word-spacing="0"/>
+                    </g>
+                    <g fill="none" stroke="#000" stroke-width="5.94" font-family="sans-serif" font-weight="700" letter-spacing="0" word-spacing="0">
+                        <g id="logoD" style="line-height:1.25;-inkscape-font-specification:'sans-serif Bold'">
+                            <path d="M-89.012 183.638q26.394 0 36.848-12.938 10.454-13.042 10.454-46.992 0-34.26-10.454-47.2-10.35-13.04-36.848-13.04h-9.937v120.17zm.414-137.353q35.399 0 52.167 18.838t16.768 58.585q0 39.54-16.768 58.377-16.768 18.735-52.167 18.735h-31.363V46.285z" aria-label="D" font-family="monospace" font-size="211.981" font-weight="400" style="-inkscape-font-specification:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start" transform="matrix(.96799 -.00138 .00241 1.03307 0 0)"/>
+                        </g>
+                        <g id="carpentry">
+                            <path d="M34.661 246.476H15.17l-3.076 8.807H-.438l17.906-48.342H32.33l17.906 48.342H37.705zm-16.384-8.97H31.52l-6.605-19.233zm56.049-9.13q3.918 0 5.601-1.457 1.717-1.457 1.717-4.792 0-3.303-1.717-4.728-1.683-1.425-5.601-1.425H69.08v12.402zm-5.246 8.613v18.294H56.614v-48.342h19.04q9.551 0 13.987 3.205 4.469 3.206 4.469 10.135 0 4.792-2.332 7.868-2.299 3.076-6.961 4.533 2.558.583 4.565 2.655 2.04 2.04 4.112 6.217l6.768 13.729H86.986l-5.893-12.013q-1.78-3.626-3.626-4.954-1.814-1.327-4.857-1.327zm38.564-30.049h20.69q9.229 0 14.15 4.113 4.955 4.08 4.955 11.656 0 7.61-4.955 11.722-4.921 4.08-14.15 4.08h-8.224v16.772h-12.466zm12.466 9.034v13.503h6.897q3.627 0 5.602-1.749 1.975-1.78 1.975-5.019 0-3.238-1.975-4.986-1.975-1.749-5.602-1.749zm36.103-9.034h33.643v9.423h-21.177v9.001h19.914v9.423h-19.914v11.074h21.889v9.422h-34.355zm45.331 0h13.924l17.582 33.157v-33.156h11.818v48.342h-13.923l-17.582-33.157v33.157h-11.819zm49.8 0h44.554v9.423H279.87v38.92h-12.466v-38.92h-16.06zm68.676 21.436q3.919 0 5.602-1.457 1.716-1.457 1.716-4.792 0-3.303-1.716-4.728-1.683-1.425-5.601-1.425h-5.246v12.402zm-5.245 8.613v18.294H302.31v-48.342h19.04q9.551 0 13.987 3.205 4.468 3.206 4.468 10.135 0 4.792-2.33 7.868-2.3 3.076-6.962 4.533 2.558.583 4.565 2.655 2.04 2.04 4.112 6.217l6.768 13.729H332.68l-5.893-12.013q-1.78-3.626-3.627-4.954-1.813-1.327-4.856-1.327zm28.203-30.049h13.631l11.01 17.226 11.008-17.225h13.665l-18.424 27.975v20.367h-12.466v-20.367z" aria-label="ARPENTRY" font-size="66.313" style="line-height:1.25;-inkscape-font-specification:'sans-serif Bold'" transform="scale(.91635 1.09129)"/>
+                        </g>
+                        <g id="details" style="line-height:1.25;-inkscape-font-specification:'sans-serif Bold'">
+                            <path d="M3.3 141.39h33.643v9.422H15.767v9.002H35.68v9.423H15.767v11.073h21.888v9.423H3.3zm39.569 0h44.554v9.422H71.395v38.921H58.93v-38.92H42.87zm75.121 39.536H98.497l-3.076 8.807h-12.53l17.905-48.343h14.863l17.906 48.343h-12.531zm-16.384-8.97h13.243l-6.605-19.233zm38.338-30.566h12.466v48.343h-12.466zm24.738 0h12.466v38.92h21.889v9.423h-34.355zm75.866 1.522v10.232q-3.983-1.781-7.771-2.688-3.789-.906-7.156-.906-4.469 0-6.606 1.23-2.137 1.23-2.137 3.82 0 1.944 1.425 3.045 1.457 1.068 5.245 1.845l5.31 1.069q8.063 1.619 11.463 4.921 3.4 3.303 3.4 9.39 0 7.998-4.76 11.916-4.727 3.886-14.474 3.886-4.598 0-9.228-.874t-9.26-2.59v-10.524q4.63 2.46 8.936 3.724 4.34 1.23 8.354 1.23 4.08 0 6.25-1.36t2.17-3.886q0-2.266-1.49-3.497-1.457-1.23-5.861-2.201l-4.825-1.069q-7.253-1.554-10.62-4.954-3.335-3.4-3.335-9.164 0-7.22 4.662-11.106 4.663-3.885 13.406-3.885 3.982 0 8.192.615 4.209.583 8.71 1.78z" aria-label="ETAILS" font-size="66.314" style="-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start" transform="scale(.91635 1.09129)"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <!-- fim do preloader -->
+
+        <div class="container"><!--init container-->
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="190" height="80" viewBox="0 0 210 297"  id="svg3705">
+                            <g id="logoC" style="line-height:1.25;-inkscape-font-specification:'monospace, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start">
+                                <path fill="none" stroke="#000" stroke-width="5.94" d="M-4.995 261.206q-7.622 4.058-15.64 6.038-8.017 2.079-17.025 2.079-28.408 0-44.147-20.094-15.64-20.094-15.64-56.52 0-36.229 15.74-56.421 15.837-20.292 44.047-20.292 9.008 0 17.026 2.078 8.017 1.98 15.64 6.038v20.49q-7.326-6.038-15.74-9.205-8.413-3.168-16.926-3.168-19.5 0-29.2 15.046-9.7 15.045-9.7 45.434 0 30.289 9.7 45.334 9.7 15.046 29.2 15.046 8.711 0 17.026-3.167 8.413-3.168 15.64-9.206z" aria-label="C" font-family="monospace" font-size="202.72" font-weight="400" letter-spacing="0" style="-inkscape-font-specification:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start" transform="matrix(.96208 -.0013 .00255 1.03941 0 0)" word-spacing="0"/>
+                            </g>
+                            <g fill="none" stroke="#000" stroke-width="5.94" font-family="sans-serif" font-weight="700" letter-spacing="0" word-spacing="0">
+                                <g id="logoD" style="line-height:1.25;-inkscape-font-specification:'sans-serif Bold'">
+                                    <path d="M-89.012 183.638q26.394 0 36.848-12.938 10.454-13.042 10.454-46.992 0-34.26-10.454-47.2-10.35-13.04-36.848-13.04h-9.937v120.17zm.414-137.353q35.399 0 52.167 18.838t16.768 58.585q0 39.54-16.768 58.377-16.768 18.735-52.167 18.735h-31.363V46.285z" aria-label="D" font-family="monospace" font-size="211.981" font-weight="400" style="-inkscape-font-specification:monospace;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start" transform="matrix(.96799 -.00138 .00241 1.03307 0 0)"/>
+                                </g>
+                                <g id="carpentry">
+                                    <path d="M34.661 246.476H15.17l-3.076 8.807H-.438l17.906-48.342H32.33l17.906 48.342H37.705zm-16.384-8.97H31.52l-6.605-19.233zm56.049-9.13q3.918 0 5.601-1.457 1.717-1.457 1.717-4.792 0-3.303-1.717-4.728-1.683-1.425-5.601-1.425H69.08v12.402zm-5.246 8.613v18.294H56.614v-48.342h19.04q9.551 0 13.987 3.205 4.469 3.206 4.469 10.135 0 4.792-2.332 7.868-2.299 3.076-6.961 4.533 2.558.583 4.565 2.655 2.04 2.04 4.112 6.217l6.768 13.729H86.986l-5.893-12.013q-1.78-3.626-3.626-4.954-1.814-1.327-4.857-1.327zm38.564-30.049h20.69q9.229 0 14.15 4.113 4.955 4.08 4.955 11.656 0 7.61-4.955 11.722-4.921 4.08-14.15 4.08h-8.224v16.772h-12.466zm12.466 9.034v13.503h6.897q3.627 0 5.602-1.749 1.975-1.78 1.975-5.019 0-3.238-1.975-4.986-1.975-1.749-5.602-1.749zm36.103-9.034h33.643v9.423h-21.177v9.001h19.914v9.423h-19.914v11.074h21.889v9.422h-34.355zm45.331 0h13.924l17.582 33.157v-33.156h11.818v48.342h-13.923l-17.582-33.157v33.157h-11.819zm49.8 0h44.554v9.423H279.87v38.92h-12.466v-38.92h-16.06zm68.676 21.436q3.919 0 5.602-1.457 1.716-1.457 1.716-4.792 0-3.303-1.716-4.728-1.683-1.425-5.601-1.425h-5.246v12.402zm-5.245 8.613v18.294H302.31v-48.342h19.04q9.551 0 13.987 3.205 4.468 3.206 4.468 10.135 0 4.792-2.33 7.868-2.3 3.076-6.962 4.533 2.558.583 4.565 2.655 2.04 2.04 4.112 6.217l6.768 13.729H332.68l-5.893-12.013q-1.78-3.626-3.627-4.954-1.813-1.327-4.856-1.327zm28.203-30.049h13.631l11.01 17.226 11.008-17.225h13.665l-18.424 27.975v20.367h-12.466v-20.367z" aria-label="ARPENTRY" font-size="66.313" style="line-height:1.25;-inkscape-font-specification:'sans-serif Bold'" transform="scale(.91635 1.09129)"/>
+                                </g>
+                                <g id="details" style="line-height:1.25;-inkscape-font-specification:'sans-serif Bold'">
+                                    <path d="M3.3 141.39h33.643v9.422H15.767v9.002H35.68v9.423H15.767v11.073h21.888v9.423H3.3zm39.569 0h44.554v9.422H71.395v38.921H58.93v-38.92H42.87zm75.121 39.536H98.497l-3.076 8.807h-12.53l17.905-48.343h14.863l17.906 48.343h-12.531zm-16.384-8.97h13.243l-6.605-19.233zm38.338-30.566h12.466v48.343h-12.466zm24.738 0h12.466v38.92h21.889v9.423h-34.355zm75.866 1.522v10.232q-3.983-1.781-7.771-2.688-3.789-.906-7.156-.906-4.469 0-6.606 1.23-2.137 1.23-2.137 3.82 0 1.944 1.425 3.045 1.457 1.068 5.245 1.845l5.31 1.069q8.063 1.619 11.463 4.921 3.4 3.303 3.4 9.39 0 7.998-4.76 11.916-4.727 3.886-14.474 3.886-4.598 0-9.228-.874t-9.26-2.59v-10.524q4.63 2.46 8.936 3.724 4.34 1.23 8.354 1.23 4.08 0 6.25-1.36t2.17-3.886q0-2.266-1.49-3.497-1.457-1.23-5.861-2.201l-4.825-1.069q-7.253-1.554-10.62-4.954-3.335-3.4-3.335-9.164 0-7.22 4.662-11.106 4.663-3.885 13.406-3.885 3.982 0 8.192.615 4.209.583 8.71 1.78z" aria-label="ETAILS" font-size="66.314" style="-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start" transform="scale(.91635 1.09129)"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" data-target="sidenavMenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#photos">Photos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="sidenavMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            
+
